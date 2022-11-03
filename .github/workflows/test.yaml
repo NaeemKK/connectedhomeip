@@ -46,7 +46,7 @@ jobs:
             - name: Checkout submodules
               run: scripts/checkout_submodules.py --shallow --platform linux
 
-           - name: Build example Standalone Echo Client
+            - name: Build example Standalone Echo Client
               timeout-minutes: 10
               run: |
                   scripts/examples/gn_build_example.sh examples/chip-tool out/chip_tool_debug
