@@ -27,13 +27,14 @@ jobs:
     linux_standalone:
         name: Linux Standalone
         timeout-minutes: 90
-
-        env:
-            BUILD_TYPE: gn_linux
-
+        
         runs-on: ubuntu-latest
         if: github.actor != 'restyled-io[bot]'
 
+
+        container:
+            image: 'hub.comcast.net/zilker/cpe/chime-app:1.0'
+        
         steps:
             - uses: Wandalen/wretry.action@v1.0.15
               name: Checkout
